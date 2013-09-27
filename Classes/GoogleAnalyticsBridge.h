@@ -16,7 +16,7 @@
 @property (copy, nonatomic) NSString *trackerID;
 @property (copy, nonatomic) NSString *pageViewURL;
 
--(id)init:(NSWindow*)window trackerID:(NSString*)trackerID;
+-(id)initWithTrackerID:(NSString*)trackerID;
 -(void)trackView:(NSString*)viewName;
 
 @end

@@ -4,15 +4,12 @@ Google Analytics Bridge
 This helper class bridges the event tracking from your app to the web version of google analytics.
 This will let you use Google Analytics on your OSX application.
 
-
-    // Initialize your GATracker
+    // Initialize GoogleAnalyticsBridge
     NSString *trackerID = @"UA-XXXXXX-Y";
-
-    self.GATrack = [[GoogleAnalyticsBridge alloc] init:self.window
-                                             trackerID:trackerID];
-
-    [self.GATrack trackView:@"applicationDidFinishLaunching"];
-
+    self.gan = [[GoogleAnalyticsBridge alloc]
+initWithTrackerID:trackerID];
+    
+    [self.gan trackView:@"applicationDidFinishLaunching"];
 
 ### Installation
 

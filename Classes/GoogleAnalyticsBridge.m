@@ -11,7 +11,7 @@
 
 @implementation GoogleAnalyticsBridge
 
-- (id)init:(NSWindow*)window trackerID:(NSString*)trackerID {
+- (id)initWithTrackerID:(NSString*)trackerID {
     self = [super init];
     if (self) {
         self.webView = [[WebView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
@@ -19,9 +19,6 @@
 
         // You only need to change this when you're forking your repository
         self.pageViewURL = @"http://jamztang.github.io/ga-bridge/pageview";
-
-        [window.contentView addSubview:self.webView];
-        
     }
     return self;
 }

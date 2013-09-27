@@ -9,16 +9,21 @@
 #import "AppDelegate.h"
 #import "GoogleAnalyticsBridge.h"
 
+@interface AppDelegate ()
+
+@property (nonatomic, strong) GoogleAnalyticsBridge *gan;
+
+@end
+
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    // Initialize GoogleAnalyticsBridge
+    NSString *trackerID = @"UA-XXXXXX-Y";
+    self.gan = [[GoogleAnalyticsBridge alloc] initWithTrackerID:trackerID];
     
-    GoogleAnalyticsBridge *gan = [[GoogleAnalyticsBridge alloc] init:self.window
-                                                           trackerID:@"UA-XXXXXXX-Y"];
-    
-    [gan trackView:@"applicationDidFinishLaunching"];
+    [self.gan trackView:@"applicationDidFinishLaunching"];
 }
 
 @end
