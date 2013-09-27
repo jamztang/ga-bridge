@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>pageview.html</title>
+
+    <script>
+      function getParameterByName(name) {
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+              results = regex.exec(location.search);
+          return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+
+      var page = getParameterByName("page") || null;
+      var tracker = getParameterByName("id") || null;
+
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        tracker.length;
+        page.length;
+        document.write("tracker: " + tracker);
+        var pageTracker = _gat._getTracker(tracker);
+        pageTracker._trackPageview(page);
+        document.write("<br>tracked pageview(" + page + ")");
+      } catch(err) {
+        document.write("<br>failed to tracked pageview(" + page + ")");
+        console.log(err);
+      }
+    </script>
+  </body>
+</html>
+
