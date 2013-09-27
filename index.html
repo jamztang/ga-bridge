@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="ga-bridge : Use Google Analytics without SDK (and for your OSX application) " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>ga-bridge</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jamztang/ga-bridge">View on GitHub</a>
+
+          <h1 id="project_title">ga-bridge</h1>
+          <h2 id="project_tagline">Use Google Analytics without SDK (and for your OSX application) </h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jamztang/ga-bridge/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jamztang/ga-bridge/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="google-analytics-bridge" class="anchor" href="#google-analytics-bridge"><span class="octicon octicon-link"></span></a>Google Analytics Bridge</h1>
+
+<p>This helper class bridges the event tracking from your app to the web version of google analytics.
+This will let you use Google Analytics on your OSX application.</p>
+
+<pre><code>// Initialize your GATracker
+NSString *trackerID = @"UA-XXXXXX-Y";
+
+self.GATrack = [[GoogleAnalyticsBridge alloc] init:self.window
+                                         trackerID:trackerID];
+
+[self.GATrack trackView:@"applicationDidFinishLaunching"];
+</code></pre>
+
+<h3>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>Drag <code>Classes/GoogleAnalyticsBridge.*</code> into your repository.</p>
+
+<h3>
+<a name="something-you-should-know" class="anchor" href="#something-you-should-know"><span class="octicon octicon-link"></span></a>Something you should know</h3>
+
+<p>The bridging make use of this repo's project github page. If you're trying to
+fork your repository, you can update the trackers pageViewURL accordingly.</p>
+
+<pre><code>self.GATrack.pageViewURL = @"yourawesomerepo.github.io/ga-bridge/pageview"
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">ga-bridge maintained by <a href="https://github.com/jamztang">jamztang</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
