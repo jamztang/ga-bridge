@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A45E5C817F589F100BF24C9 /* GoogleAnalyticsBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A45E5C717F589F100BF24C9 /* GoogleAnalyticsBridge.m */; };
+		1A45E5CA17F58AFC00BF24C9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A45E5C917F58AFC00BF24C9 /* WebKit.framework */; };
 		1AEEDBED17F5892000B53686 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AEEDBEC17F5892000B53686 /* Cocoa.framework */; };
 		1AEEDBF717F5892000B53686 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AEEDBF517F5892000B53686 /* InfoPlist.strings */; };
 		1AEEDBF917F5892000B53686 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEEDBF817F5892000B53686 /* main.m */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A45E5C617F589F100BF24C9 /* GoogleAnalyticsBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleAnalyticsBridge.h; sourceTree = "<group>"; };
+		1A45E5C717F589F100BF24C9 /* GoogleAnalyticsBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleAnalyticsBridge.m; sourceTree = "<group>"; };
+		1A45E5C917F58AFC00BF24C9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1AEEDBE917F5892000B53686 /* ga-bridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ga-bridge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AEEDBEC17F5892000B53686 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1AEEDBEF17F5892000B53686 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -36,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A45E5CA17F58AFC00BF24C9 /* WebKit.framework in Frameworks */,
 				1AEEDBED17F5892000B53686 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +52,7 @@
 		1AEEDBE017F5892000B53686 = {
 			isa = PBXGroup;
 			children = (
+				1AEEDC0917F5895900B53686 /* Classes */,
 				1AEEDBF217F5892000B53686 /* ga-bridge */,
 				1AEEDBEB17F5892000B53686 /* Frameworks */,
 				1AEEDBEA17F5892000B53686 /* Products */,
@@ -63,6 +70,7 @@
 		1AEEDBEB17F5892000B53686 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A45E5C917F58AFC00BF24C9 /* WebKit.framework */,
 				1AEEDBEC17F5892000B53686 /* Cocoa.framework */,
 				1AEEDBEE17F5892000B53686 /* Other Frameworks */,
 			);
@@ -100,6 +108,15 @@
 				1AEEDBFB17F5892000B53686 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1AEEDC0917F5895900B53686 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1A45E5C617F589F100BF24C9 /* GoogleAnalyticsBridge.h */,
+				1A45E5C717F589F100BF24C9 /* GoogleAnalyticsBridge.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +185,7 @@
 			files = (
 				1AEEDBF917F5892000B53686 /* main.m in Sources */,
 				1AEEDC0017F5892000B53686 /* AppDelegate.m in Sources */,
+				1A45E5C817F589F100BF24C9 /* GoogleAnalyticsBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +321,7 @@
 				1AEEDC0817F5892000B53686 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
